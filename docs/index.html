@@ -1,106 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travis Murphy | Cloud Engineer & DevOps</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travis Murphy — Cloud Engineer Portfolio</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Typewriter effect */
+    .typewriter-text {
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    /* Hero background animation */
+    .hero-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(99,102,241,0.2), transparent 50%), 
+                  radial-gradient(circle at 70% 70%, rgba(139,92,246,0.2), transparent 50%);
+      animation: moveBG 10s infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes moveBG {
+      0% { transform: translate(0,0) rotate(0deg); }
+      50% { transform: translate(20px, -20px) rotate(10deg); }
+      100% { transform: translate(0,0) rotate(0deg); }
+    }
+
+    /* Button hover */
+    .btn-primary:hover {
+      background-color: white;
+      color: #6366F1;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
+<body class="bg-gray-900 text-white">
+
+  <!-- Header / Navbar -->
+  <header class="site-header bg-gray-900 bg-opacity-90 fixed w-full z-50 shadow-md backdrop-blur-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
+      <h1 class="text-2xl font-extrabold">Travis Murphy</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-purple-400 transition">Home</a>
+        <a href="about.html" class="hover:text-purple-400 transition">About</a>
+        <a href="projects.html" class="hover:text-purple-400 transition">Projects</a>
+        <a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Hero Section -->
-  <section class="relative flex flex-col justify-center items-center h-screen text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Hi, I’m Travis Murphy</h1>
-    <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-200">Cloud Engineer | DevOps Enthusiast | Problem Solver</p>
-    <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full text-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300 animate-bounce">View My Work</a>
-    <!-- Subtle floating particles -->
-    <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
-      <div class="particle bg-purple-500 opacity-30"></div>
-      <div class="particle bg-blue-500 opacity-20"></div>
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="hero-bg"></div>
+
+    <div class="text-center px-4 z-10">
+      <h2 class="text-5xl md:text-6xl font-extrabold mb-6">Hi, I’m Travis Murphy.</h2>
+      <p class="text-lg md:text-2xl mb-6 typewriter-text" id="typewriter"></p>
+      <a href="projects.html" class="btn-primary bg-purple-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg transition duration-300 inline-block">
+        View My Work
+      </a>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 bg-gray-800 text-center">
-    <h2 class="text-4xl font-bold mb-10">My Skills</h2>
-    <div class="flex flex-wrap justify-center gap-6">
-      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition duration-300">
-        <h3 class="font-semibold text-xl mb-2">AWS Cloud</h3>
-        <p class="text-gray-300">EC2, S3, VPC, Lambda</p>
+  <!-- Core Skills Section -->
+  <section class="max-w-6xl mx-auto py-20 px-4">
+    <h3 class="text-3xl font-bold text-center mb-12">Core Skills & Expertise</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2">
+        <h4 class="text-xl font-semibold mb-2 text-purple-400">AWS Cloud</h4>
+        <p class="text-gray-300">EC2, S3, CloudFront, Route53 — deploying scalable cloud solutions.</p>
       </div>
-      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition duration-300">
-        <h3 class="font-semibold text-xl mb-2">Terraform</h3>
-        <p class="text-gray-300">Infrastructure as Code</p>
+
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2">
+        <h4 class="text-xl font-semibold mb-2 text-purple-400">Terraform & IaC</h4>
+        <p class="text-gray-300">Automating infrastructure provisioning with clean, reusable modules.</p>
       </div>
-      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition duration-300">
-        <h3 class="font-semibold text-xl mb-2">DevOps</h3>
-        <p class="text-gray-300">CI/CD, Docker, GitHub Actions</p>
+
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2">
+        <h4 class="text-xl font-semibold mb-2 text-purple-400">Security & IAM</h4>
+        <p class="text-gray-300">Implementing secure access controls, policies, and best practices.</p>
       </div>
-      <!-- Add more skill cards here -->
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-gray-900 text-center">
-    <h2 class="text-4xl font-bold mb-10">Featured Projects</h2>
-    <div class="flex flex-wrap justify-center gap-8">
-      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
-        <h3 class="font-semibold text-xl mb-2">Project One</h3>
-        <p class="text-gray-300 mb-4">A cloud automation project using AWS and Terraform.</p>
-        <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
+  <!-- Featured Projects Preview -->
+  <section class="bg-gray-800 py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-12">Featured Projects</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2 text-purple-400">Static Website Hosting</h4>
+          <p class="text-gray-300 mb-4">Deployed a scalable static site using AWS S3, CloudFront, and Route53.</p>
+          <a href="#" class="text-purple-400 hover:underline">View Project →</a>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2 text-purple-400">IAM Automation</h4>
+          <p class="text-gray-300 mb-4">Automated IAM roles and policies using Terraform modules.</p>
+          <a href="#" class="text-purple-400 hover:underline">View Project →</a>
+        </div>
       </div>
-      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
-        <h3 class="font-semibold text-xl mb-2">Project Two</h3>
-        <p class="text-gray-300 mb-4">Serverless application demonstrating DevOps best practices.</p>
-        <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
+      <div class="mt-10 text-center">
+        <a href="projects.html" class="text-purple-400 hover:underline font-semibold">See All Projects →</a>
       </div>
-      <!-- Add more project cards here -->
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-800 text-center">
-    <h2 class="text-4xl font-bold mb-10">Get In Touch</h2>
-    <p class="text-gray-300 mb-6">Feel free to reach out for collaboration, consulting, or just a friendly hello!</p>
-    <a href="mailto:travis@example.com" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300">Email Me</a>
+  <!-- Call-to-Action / Contact Preview -->
+  <section class="bg-gradient-to-r from-purple-600 to-blue-500 py-20 px-4 text-center">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold mb-4">Want to Collaborate?</h3>
+      <p class="mb-6 text-gray-200">I’m always open to exciting cloud projects or consulting opportunities.</p>
+      <a href="contact.html" class="bg-white text-purple-600 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition font-semibold">
+        Get in Touch
+      </a>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 bg-gray-900 text-center text-gray-500">
-    &copy; 2025 Travis Murphy. All rights reserved.
+  <footer class="site-footer bg-gray-900 text-gray-400 text-center py-6">
+    © 2025 Travis Murphy. All rights reserved.
   </footer>
 
-  <!-- Optional JS for fade-in and particles -->
+  <!-- Typewriter JS -->
   <script>
-    // Fade-in animations
-    document.querySelectorAll('.animate-fade-in').forEach(el => {
-      el.classList.add('opacity-0');
-      setTimeout(() => el.classList.add('opacity-100', 'transition', 'duration-1000'), 100);
-    });
+    const phrases = [
+      "Cloud Engineer | AWS & IAM Specialist",
+      "Infrastructure as Code Enthusiast",
+      "Terraform, Security, Automation"
+    ];
+    let i = 0, j = 0;
+    let currentPhrase = '';
+    let isDeleting = false;
+    const speed = 100;
 
-    // Simple floating particles
-    const particles = document.querySelectorAll('.particle');
-    particles.forEach(p => {
-      const size = Math.random() * 10 + 5;
-      const x = Math.random() * window.innerWidth;
-      const y = Math.random() * window.innerHeight;
-      p.style.width = size + 'px';
-      p.style.height = size + 'px';
-      p.style.position = 'absolute';
-      p.style.top = y + 'px';
-      p.style.left = x + 'px';
-      p.style.borderRadius = '50%';
-      p.style.animation = `float ${5 + Math.random()*5}s ease-in-out infinite alternate`;
-    });
-  </script>
+    function typeWriter() {
+      const txtElement = document.getElementById('typewriter');
+      if (!txtElement) return;
 
-  <style>
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-50px); }
+      if (!isDeleting) {
+        currentPhrase = phrases[i].substring(0, j+1);
+        txtElement.textContent = currentPhrase;
+        j++;
+        if (currentPhrase === phrases[i]) {
+          isDeleting = true;
+          setTimeout(typeWriter, 1500);
+          return;
+        }
+      } else {
+        currentPhrase = phrases[i].substring(0, j-1);
+        txtElement.textContent = currentPhrase;
+        j--;
+        if (currentPhrase === '') {
+          isDeleting = false;
+          i = (i + 1) % phrases.length;
+        }
+      }
+      setTimeout(typeWriter, speed);
     }
-  </style>
 
+    document.addEventListener('DOMContentLoaded', typeWriter);
+  </script>
 </body>
 </html>
