@@ -1,120 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travis Murphy | Cloud Engineer & DevOps</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    html { scroll-behavior: smooth; }
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-50px); }
-    }
-    .animate-fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-    }
-    .animate-fade-in.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travis Murphy | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
+<body>
 
-  <!-- Hero Section -->
-  <section class="relative flex flex-col justify-center items-center h-screen text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Hi, I’m Travis Murphy</h1>
-    <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-200">Cloud Engineer | DevOps Enthusiast | Problem Solver</p>
-    <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full text-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition transform hover:-translate-y-1 animate-bounce">View My Work</a>
-    <!-- Subtle floating particles -->
-    <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
-      <div class="particle bg-purple-500 opacity-20"></div>
-      <div class="particle bg-blue-500 opacity-15"></div>
-    </div>
-  </section>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Travis Murphy</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-24 bg-gray-800 text-center max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold mb-12">My Skills</h2>
-    <div class="flex flex-wrap justify-center gap-6">
-      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
-        <h3 class="font-semibold text-xl mb-2">AWS Cloud</h3>
-        <p class="text-gray-200">EC2, S3, VPC, Lambda</p>
-      </div>
-      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
-        <h3 class="font-semibold text-xl mb-2">Terraform</h3>
-        <p class="text-gray-200">Infrastructure as Code</p>
-      </div>
-      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
-        <h3 class="font-semibold text-xl mb-2">DevOps</h3>
-        <p class="text-gray-200">CI/CD, Docker, GitHub Actions</p>
-      </div>
-      <!-- Add more skill cards here -->
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="animate-fade-in show">Hi, I'm Travis Murphy</h1>
+        <p class="animate-fade-in show">I build immersive digital experiences and unique personal projects.</p>
+        <a href="#projects" class="animate-fade-in show">View My Work</a>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-24 bg-gray-900 text-center max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold mb-12">Featured Projects</h2>
-    <div class="flex flex-wrap justify-center gap-8">
-      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
-        <h3 class="font-semibold text-xl mb-2">Project One</h3>
-        <p class="text-gray-200 mb-4">A cloud automation project using AWS and Terraform.</p>
-        <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
-      </div>
-      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
-        <h3 class="font-semibold text-xl mb-2">Project Two</h3>
-        <p class="text-gray-200 mb-4">Serverless application demonstrating DevOps best practices.</p>
-        <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
-      </div>
-      <!-- Add more project cards here -->
-    </div>
-  </section>
+        <!-- Floating particles -->
+        <div id="particles-container"></div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-24 bg-gray-800 text-center max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold mb-12">Get In Touch</h2>
-    <p class="text-gray-200 mb-6">Feel free to reach out for collaboration, consulting, or just a friendly hello!</p>
-    <a href="mailto:travis@example.com" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition transform hover:-translate-y-1">Email Me</a>
-  </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I’m a developer and creator passionate about building interactive web experiences and polished digital projects. My goal is to make every interaction meaningful and visually engaging.</p>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-6 bg-gray-900 text-center text-gray-500">
-    &copy; 2025 Travis Murphy. All rights reserved.
-  </footer>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML / CSS / JS</div>
+            <div class="skill-card">React / Vue</div>
+            <div class="skill-card">Node.js / Express</div>
+            <div class="skill-card">Three.js / WebGL</div>
+            <div class="skill-card">UI / UX Design</div>
+        </div>
+    </section>
 
-  <!-- Optional JS for fade-in, scroll animation, and particles -->
-  <script>
-    // Fade-in on scroll using IntersectionObserver
-    const fadeElements = document.querySelectorAll('.animate-fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>Web experience with interactive UI elements.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>3D VR portfolio project with immersive visuals.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>Creative digital art & interactive design.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <a href="mailto:travis@example.com">Get In Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Travis Murphy. All rights reserved.</p>
+    </footer>
+
+    <!-- Particles JS -->
+    <script>
+        const particlesContainer = document.getElementById('particles-container');
+
+        for(let i=0; i<30; i++){
+            let particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.width = `${Math.random()*8+4}px`;
+            particle.style.height = particle.style.width;
+            particle.style.left = `${Math.random()*100}%`;
+            particle.style.top = `${Math.random()*100}%`;
+            particle.style.backgroundColor = `rgba(255,255,255,${Math.random()*0.3})`;
+            particle.style.animationDuration = `${Math.random()*5+3}s`;
+            particlesContainer.appendChild(particle);
         }
-      });
-    }, { threshold: 0.2 });
-    fadeElements.forEach(el => observer.observe(el));
-
-    // Floating particles
-    const particles = document.querySelectorAll('.particle');
-    particles.forEach(p => {
-      const size = Math.random() * 10 + 5;
-      const x = Math.random() * window.innerWidth;
-      const y = Math.random() * window.innerHeight;
-      p.style.width = size + 'px';
-      p.style.height = size + 'px';
-      p.style.position = 'absolute';
-      p.style.top = y + 'px';
-      p.style.left = x + 'px';
-      p.style.borderRadius = '50%';
-      p.style.animation = `float ${5 + Math.random() * 5}s ease-in-out infinite alternate`;
-    });
-  </script>
+    </script>
 
 </body>
 </html>
