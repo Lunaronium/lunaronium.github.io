@@ -29,21 +29,25 @@
   <!-- Contact Form Section -->
   <section class="py-12 md:py-16 px-6 md:px-12 max-w-3xl mx-auto">
     <h2 class="text-4xl font-bold mb-8 text-center">Send a Message</h2>
-    <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-lg space-y-6">
+    <!-- Form using Formsubmit -->
+    <form action="https://formspree.io/f/meozbovl" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-lg space-y-6">
       
+      <!-- Hide email field from bots -->
+      <input type="hidden" name="_captcha" value="false">
+
       <div>
         <label for="name" class="block text-gray-300 mb-2 font-semibold">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500">
       </div>
 
       <div>
         <label for="email" class="block text-gray-300 mb-2 font-semibold">Email</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <input type="email" id="email" name="email" placeholder="you@example.com" required class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500">
       </div>
 
       <div>
         <label for="message" class="block text-gray-300 mb-2 font-semibold">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Your message..." class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+        <textarea id="message" name="message" rows="6" placeholder="Your message..." required class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
       </div>
 
       <button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300">Send Message</button>
@@ -53,7 +57,6 @@
   <!-- Additional Contact Info -->
   <section class="py-12 bg-gray-800 text-center">
     <h2 class="text-4xl font-bold mb-4">Other Ways to Reach Me</h2>
-    <p class="text-gray-300 mb-6">Email, social media, or carrier pigeon – your choice! 📨</p>
     <p class="text-gray-300 mb-2">Email: <a href="mailto:travis@example.com" class="text-purple-400 hover:text-purple-600">travis@example.com</a></p>
     <p class="text-gray-300">LinkedIn: <a href="#" class="text-purple-400 hover:text-purple-600">@YourLinkedIn</a></p>
   </section>
