@@ -4,71 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luna R — Cloud Engineer Portfolio</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-  <!-- Header -->
-  <header class="bg-gray-900 text-white py-6 shadow-md">
-    <div class="max-w-4xl mx-auto flex justify-between items-center px-4">
+  <!-- Header / Navbar -->
+  <header class="site-header bg-gray-900 text-white shadow-md">
+    <div class="max-w-4xl mx-auto flex justify-between items-center px-4 py-6">
       <h1 class="text-2xl font-bold">Luna R</h1>
       <nav class="space-x-4">
-        <a href="#about" class="hover:text-blue-400">About</a>
-        <a href="#projects" class="hover:text-blue-400">Projects</a>
-        <a href="#skills" class="hover:text-blue-400">Skills</a>
-        <a href="#contact" class="hover:text-blue-400">Contact</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero / Intro -->
+  <!-- Hero Section -->
   <section class="max-w-4xl mx-auto text-center py-20 px-4">
     <h2 class="text-4xl font-extrabold mb-4">Cloud Engineer | AWS | IAM | Terraform</h2>
     <p class="text-lg text-gray-600 mb-6">
       Passionate about cloud security, automation, and building scalable solutions on AWS.
     </p>
-    <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">View My Work</a>
+    <a href="projects.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+      View My Work
+    </a>
   </section>
 
-  <!-- About -->
-  <section id="about" class="max-w-4xl mx-auto py-16 px-4">
+  <!-- About Preview -->
+  <section class="max-w-4xl mx-auto py-16 px-4">
     <h3 class="text-2xl font-bold mb-4">About Me</h3>
-    <p class="text-gray-700 leading-relaxed">
-      Hi, I’m Luna! With hands-on experience in AWS, Terraform, IAM, and cloud security, 
-      I specialize in designing and automating cloud solutions. I also have a strong background 
-      in server setups, Linux, and DevOps practices.
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Hi, I’m Luna! I specialize in designing and automating cloud solutions using AWS and Terraform. 
+      With a strong background in server setups, Linux, and cloud security, I love turning ideas into scalable projects.
     </p>
+    <a href="about.html" class="text-blue-600 hover:underline">Learn More →</a>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="bg-gray-100 py-16 px-4">
+  <!-- Projects Preview -->
+  <section class="bg-gray-100 py-16 px-4">
     <div class="max-w-4xl mx-auto">
       <h3 class="text-2xl font-bold mb-8">Projects</h3>
       <div class="grid md:grid-cols-2 gap-8">
-        
-        <!-- Project Card -->
+
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
           <h4 class="text-xl font-semibold mb-2">AWS Static Website Hosting</h4>
-          <p class="text-gray-600 mb-4">Deployed a secure, scalable static site using AWS S3, CloudFront, and Route53.</p>
+          <p class="text-gray-600 mb-4">
+            Deployed a secure, scalable static site using AWS S3, CloudFront, and Route53.
+          </p>
           <a href="#" class="text-blue-600 hover:underline">View Project →</a>
         </div>
 
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
           <h4 class="text-xl font-semibold mb-2">IAM Automation with Terraform</h4>
-          <p class="text-gray-600 mb-4">Automated IAM role and policy creation using Terraform modules.</p>
+          <p class="text-gray-600 mb-4">
+            Automated IAM role and policy creation using Terraform modules.
+          </p>
           <a href="#" class="text-blue-600 hover:underline">View Project →</a>
         </div>
 
       </div>
+      <div class="mt-6 text-center">
+        <a href="projects.html" class="text-blue-600 hover:underline">See All Projects →</a>
+      </div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="max-w-4xl mx-auto py-16 px-4">
+  <!-- Skills Preview -->
+  <section class="max-w-4xl mx-auto py-16 px-4">
     <h3 class="text-2xl font-bold mb-4">Skills & Certifications</h3>
     <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-700">
       <li>✅ AWS IAM & Security</li>
-      <li>✅ Terraform & IaC</li>
+      <li>✅ Terraform & Infrastructure as Code</li>
       <li>✅ EC2, S3, RDS</li>
       <li>✅ CloudFront & CDN</li>
       <li>✅ Linux & DevOps</li>
@@ -76,21 +89,21 @@
     </ul>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-gray-900 text-white py-16 px-4">
+  <!-- Contact Preview -->
+  <section class="bg-gray-900 text-white py-16 px-4">
     <div class="max-w-4xl mx-auto text-center">
       <h3 class="text-2xl font-bold mb-4">Let’s Connect</h3>
       <p class="mb-6">Interested in collaborating or have an opportunity? Get in touch!</p>
       <div class="space-x-4">
-        <a href="mailto:your@email.com" class="bg-blue-600 px-5 py-3 rounded-lg hover:bg-blue-700">Email Me</a>
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="bg-gray-700 px-5 py-3 rounded-lg hover:bg-gray-600">LinkedIn</a>
-        <a href="https://github.com/lunaronium" target="_blank" class="bg-gray-700 px-5 py-3 rounded-lg hover:bg-gray-600">GitHub</a>
+        <a href="mailto:your@email.com" class="bg-blue-600 px-5 py-3 rounded-lg hover:bg-blue-700 transition">Email Me</a>
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="bg-gray-700 px-5 py-3 rounded-lg hover:bg-gray-600 transition">LinkedIn</a>
+        <a href="https://github.com/lunaronium" target="_blank" class="bg-gray-700 px-5 py-3 rounded-lg hover:bg-gray-600 transition">GitHub</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-400 text-center py-6">
+  <footer class="site-footer bg-gray-800 text-gray-400 text-center py-6">
     © 2025 Luna R. All rights reserved.
   </footer>
 

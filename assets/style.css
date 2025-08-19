@@ -1,0 +1,16 @@
+/* Global custom styles for site */
+
+/* Navbar links */
+.site-header nav a {
+  @apply text-gray-300 hover:text-blue-400 px-3 py-2 transition;
+}
+
+/* Footer */
+.site-footer {
+  @apply bg-gray-900 text-gray-400 text-center py-6;
+}
+
+/* active nav link styling */
+.site-header nav a.active {
+  @apply text-blue-500 font-semibold;
+}
