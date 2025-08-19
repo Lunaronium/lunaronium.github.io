@@ -15,7 +15,7 @@
 
   <!-- Header / Navbar -->
   <header class="site-header bg-gray-900 text-white shadow-md">
-    <div class="max-w-4xl mx-auto flex justify-between items-center px-4 py-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-6">
       <h1 class="text-2xl font-bold">Luna R</h1>
       <nav class="space-x-4">
         <a href="index.html" class="active">Home</a>
@@ -27,78 +27,81 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="max-w-4xl mx-auto text-center py-20 px-4">
-    <h2 class="text-4xl font-extrabold mb-4">Cloud Engineer | AWS | IAM | Terraform</h2>
-    <p class="text-lg text-gray-600 mb-6">
-      Passionate about cloud security, automation, and building scalable solutions on AWS.
-    </p>
-    <a href="projects.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
-      View My Work
-    </a>
-  </section>
-
-  <!-- About Preview -->
-  <section class="max-w-4xl mx-auto py-16 px-4">
-    <h3 class="text-2xl font-bold mb-4">About Me</h3>
-    <p class="text-gray-700 leading-relaxed mb-4">
-      Hi, I’m Luna! I specialize in designing and automating cloud solutions using AWS and Terraform. 
-      With a strong background in server setups, Linux, and cloud security, I love turning ideas into scalable projects.
-    </p>
-    <a href="about.html" class="text-blue-600 hover:underline">Learn More →</a>
-  </section>
-
-  <!-- Projects Preview -->
-  <section class="bg-gray-100 py-16 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h3 class="text-2xl font-bold mb-8">Projects</h3>
-      <div class="grid md:grid-cols-2 gap-8">
-
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-2">AWS Static Website Hosting</h4>
-          <p class="text-gray-600 mb-4">
-            Deployed a secure, scalable static site using AWS S3, CloudFront, and Route53.
-          </p>
-          <a href="#" class="text-blue-600 hover:underline">View Project →</a>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-2">IAM Automation with Terraform</h4>
-          <p class="text-gray-600 mb-4">
-            Automated IAM role and policy creation using Terraform modules.
-          </p>
-          <a href="#" class="text-blue-600 hover:underline">View Project →</a>
-        </div>
-
+  <section class="relative bg-gradient-to-r from-blue-500 to-purple-600 text-white py-32">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      
+      <!-- Text -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in">Hi, I’m Luna R.</h2>
+        <p class="text-lg md:text-xl mb-6 animate-fade-in delay-200">
+          Cloud Engineer passionate about AWS, IAM, and Infrastructure as Code.
+        </p>
+        <a href="projects.html" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition animate-fade-in delay-400">
+          View My Work
+        </a>
       </div>
-      <div class="mt-6 text-center">
-        <a href="projects.html" class="text-blue-600 hover:underline">See All Projects →</a>
+
+      <!-- Illustration -->
+      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+        <img src="assets/hero-illustration.svg" alt="Cloud illustration" class="w-80 md:w-full animate-fade-in delay-600">
       </div>
     </div>
   </section>
 
-  <!-- Skills Preview -->
-  <section class="max-w-4xl mx-auto py-16 px-4">
-    <h3 class="text-2xl font-bold mb-4">Skills & Certifications</h3>
-    <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-700">
-      <li>✅ AWS IAM & Security</li>
-      <li>✅ Terraform & Infrastructure as Code</li>
-      <li>✅ EC2, S3, RDS</li>
-      <li>✅ CloudFront & CDN</li>
-      <li>✅ Linux & DevOps</li>
-      <li>✅ CompTIA Security+</li>
-    </ul>
+  <!-- Highlights / Skills Section -->
+  <section class="max-w-6xl mx-auto py-20 px-4">
+    <h3 class="text-3xl font-bold text-center mb-12">Core Skills & Expertise</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2">
+        <h4 class="text-xl font-semibold mb-2">AWS Cloud</h4>
+        <p class="text-gray-600">EC2, S3, CloudFront, Route53 — deploying scalable cloud solutions.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2">
+        <h4 class="text-xl font-semibold mb-2">Terraform & IaC</h4>
+        <p class="text-gray-600">Automating infrastructure provisioning with clean, reusable modules.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2">
+        <h4 class="text-xl font-semibold mb-2">Security & IAM</h4>
+        <p class="text-gray-600">Implementing secure access controls, policies, and best practices.</p>
+      </div>
+
+    </div>
   </section>
 
-  <!-- Contact Preview -->
-  <section class="bg-gray-900 text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-2xl font-bold mb-4">Let’s Connect</h3>
-      <p class="mb-6">Interested in collaborating or have an opportunity? Get in touch!</p>
-      <div class="space-x-4">
-        <a href="mailto:your@email.com" class="bg-blue-600 px-5 py-3 rounded-lg hover:bg-blue-700 transition">Email Me</a>
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="bg-gray-700 px-5 py-3 rounded-lg hover:bg-gray-600 transition">LinkedIn</a>
-        <a href="https://github.com/lunaronium" target="_blank" class="bg-gray-700 px-5 py-3 rounded-lg hover:bg-gray-600 transition">GitHub</a>
+  <!-- Featured Projects Preview -->
+  <section class="bg-gray-100 py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-12">Featured Projects</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2">Static Website Hosting</h4>
+          <p class="text-gray-600 mb-4">Deployed a scalable static site using AWS S3, CloudFront, and Route53.</p>
+          <a href="#" class="text-blue-600 hover:underline">View Project →</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-2">IAM Automation</h4>
+          <p class="text-gray-600 mb-4">Automated IAM roles and policies using Terraform modules.</p>
+          <a href="#" class="text-blue-600 hover:underline">View Project →</a>
+        </div>
+
       </div>
+      <div class="mt-10 text-center">
+        <a href="projects.html" class="text-blue-600 hover:underline font-semibold">See All Projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action / Contact Preview -->
+  <section class="bg-gray-900 text-white py-20 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4">Want to Collaborate?</h3>
+      <p class="mb-6 text-gray-200">I’m always open to exciting cloud projects or consulting opportunities.</p>
+      <a href="contact.html" class="bg-blue-600 px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">Get in Touch</a>
     </div>
   </section>
 
