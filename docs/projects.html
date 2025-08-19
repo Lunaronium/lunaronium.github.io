@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travis Murphy | Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
+
+  <!-- Hero Section -->
+  <section class="relative flex flex-col justify-center items-center h-96 text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">My Projects</h1>
+    <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-200">Explore my cloud, DevOps, and automation work</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="py-20 bg-gray-900 text-center">
+    <h2 class="text-4xl font-bold mb-10">Featured Projects</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+        <h3 class="font-semibold text-xl mb-2">Cloud Automation</h3>
+        <p class="text-gray-300 mb-4">Automated AWS infrastructure deployment using Terraform and Lambda.</p>
+        <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
+      </div>
+      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+        <h3 class="font-semibold text-xl mb-2">Serverless App</h3>
+        <p class="text-gray-300 mb-4">A serverless application built with API Gateway, Lambda, and DynamoDB.</p>
+        <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
+      </div>
+      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+        <h3 class="font-semibold text-xl mb-2">CI/CD Pipeline</h3>
+        <p class="text-gray-300 mb-4">Implemented CI/CD pipelines using GitHub Actions and Docker containers.</p>
+        <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
+      </div>
+      <!-- Add more project cards here -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-800 text-center">
+    <h2 class="text-4xl font-bold mb-10">Get In Touch</h2>
+    <p class="text-gray-300 mb-6">Interested in collaborating or have questions? Reach out!</p>
+    <a href="mailto:travis@example.com" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300">Email Me</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-center text-gray-500">
+    &copy; 2025 Travis Murphy. All rights reserved.
+  </footer>
+
+  <!-- Optional JS for fade-in -->
+  <script>
+    document.querySelectorAll('.animate-fade-in').forEach(el => {
+      el.classList.add('opacity-0');
+      setTimeout(() => el.classList.add('opacity-100', 'transition', 'duration-1000'), 100);
+    });
+  </script>
+
+</body>
+</html>
