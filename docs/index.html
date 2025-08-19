@@ -1,139 +1,106 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Travis Murphy — Cloud Engineer Portfolio</title>
-
-  <!-- Tailwind CDN -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travis Murphy | Cloud Engineer & DevOps</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/style.css">
-
-  <!-- Optional: small fade/slide animations -->
-  <style>
-    .animate-fade-in { 
-      opacity: 0; 
-      animation: fadeIn 1s forwards; 
-    }
-    .animate-fade-in.delay-200 { animation-delay: 0.2s; }
-    .animate-fade-in.delay-400 { animation-delay: 0.4s; }
-    .animate-fade-in.delay-600 { animation-delay: 0.6s; }
-    @keyframes fadeIn { 
-      to { opacity: 1; } 
-    }
-
-    /* Floating effect for hero illustration */
-    .float { 
-      animation: float 3s ease-in-out infinite; 
-    }
-    @keyframes float { 
-      0%, 100% { transform: translateY(0); } 
-      50% { transform: translateY(-10px); } 
-    }
-
-    /* Highlight bounce effect on CTA */
-    .bounce:hover {
-      animation: bounce 0.6s;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-
-  <!-- Header / Navbar -->
-  <header class="site-header bg-gray-900 text-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-2xl font-bold">Travis Murphy</h1>
-      <nav class="space-x-4 text-lg">
-        <a href="index.html" class="text-blue-400 hover:text-white font-semibold">Home</a>
-        <a href="about.html" class="hover:text-blue-400">About</a>
-        <a href="projects.html" class="hover:text-blue-400">Projects</a>
-        <a href="contact.html" class="hover:text-blue-400">Contact</a>
-      </nav>
-    </div>
-  </header>
+<body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
 
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-r from-blue-500 to-purple-600 text-white py-32">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-
-      <!-- Text -->
-      <div class="md:w-1/2 text-center md:text-left space-y-6">
-        <h2 class="text-5xl md:text-6xl font-extrabold animate-fade-in">Hi, I’m Travis Murphy.</h2>
-        <p class="text-lg md:text-xl animate-fade-in delay-200">
-          Cloud Engineer passionate about AWS, IAM, and Infrastructure as Code.
-        </p>
-        <a href="projects.html" class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition animate-fade-in delay-400 bounce">
-          View My Work
-        </a>
-      </div>
-
-      <!-- Illustration -->
-      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-        <img src="assets/hero-illustration.svg" alt="Cloud illustration" class="w-80 md:w-full float animate-fade-in delay-600">
-      </div>
+  <section class="relative flex flex-col justify-center items-center h-screen text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Hi, I’m Travis Murphy</h1>
+    <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-200">Cloud Engineer | DevOps Enthusiast | Problem Solver</p>
+    <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full text-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300 animate-bounce">View My Work</a>
+    <!-- Subtle floating particles -->
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+      <div class="particle bg-purple-500 opacity-30"></div>
+      <div class="particle bg-blue-500 opacity-20"></div>
     </div>
   </section>
 
-  <!-- Highlights / Skills Section -->
-  <section class="max-w-6xl mx-auto py-20 px-6">
-    <h3 class="text-3xl font-bold text-center mb-12">Core Skills & Expertise</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 hover:scale-105">
-        <h4 class="text-xl font-semibold mb-2">AWS Cloud</h4>
-        <p class="text-gray-600">EC2, S3, CloudFront, Route53 — deploying scalable cloud solutions.</p>
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-800 text-center">
+    <h2 class="text-4xl font-bold mb-10">My Skills</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <h3 class="font-semibold text-xl mb-2">AWS Cloud</h3>
+        <p class="text-gray-300">EC2, S3, VPC, Lambda</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 hover:scale-105">
-        <h4 class="text-xl font-semibold mb-2">Terraform & IaC</h4>
-        <p class="text-gray-600">Automating infrastructure provisioning with clean, reusable modules.</p>
+      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <h3 class="font-semibold text-xl mb-2">Terraform</h3>
+        <p class="text-gray-300">Infrastructure as Code</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2 hover:scale-105">
-        <h4 class="text-xl font-semibold mb-2">Security & IAM</h4>
-        <p class="text-gray-600">Implementing secure access controls, policies, and best practices.</p>
+      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <h3 class="font-semibold text-xl mb-2">DevOps</h3>
+        <p class="text-gray-300">CI/CD, Docker, GitHub Actions</p>
       </div>
+      <!-- Add more skill cards here -->
     </div>
   </section>
 
-  <!-- Featured Projects Preview -->
-  <section class="bg-gray-100 py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold text-center mb-12">Featured Projects</h3>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
-          <h4 class="text-xl font-semibold mb-2">Static Website Hosting</h4>
-          <p class="text-gray-600 mb-4">Deployed a scalable static site using AWS S3, CloudFront, and Route53.</p>
-          <a href="#" class="text-blue-600 hover:underline">View Project →</a>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
-          <h4 class="text-xl font-semibold mb-2">IAM Automation</h4>
-          <p class="text-gray-600 mb-4">Automated IAM roles and policies using Terraform modules.</p>
-          <a href="#" class="text-blue-600 hover:underline">View Project →</a>
-        </div>
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-900 text-center">
+    <h2 class="text-4xl font-bold mb-10">Featured Projects</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+        <h3 class="font-semibold text-xl mb-2">Project One</h3>
+        <p class="text-gray-300 mb-4">A cloud automation project using AWS and Terraform.</p>
+        <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
       </div>
-      <div class="mt-10 text-center">
-        <a href="projects.html" class="text-blue-600 hover:underline font-semibold">See All Projects →</a>
+      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+        <h3 class="font-semibold text-xl mb-2">Project Two</h3>
+        <p class="text-gray-300 mb-4">Serverless application demonstrating DevOps best practices.</p>
+        <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
       </div>
+      <!-- Add more project cards here -->
     </div>
   </section>
 
-  <!-- Call-to-Action / Contact Preview -->
-  <section class="bg-gray-900 text-white py-20 px-6">
-    <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-4">Want to Collaborate?</h3>
-      <p class="mb-6 text-gray-200">I’m always open to exciting cloud projects or consulting opportunities.</p>
-      <a href="contact.html" class="inline-block bg-blue-600 px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition bounce">Get in Touch</a>
-    </div>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-800 text-center">
+    <h2 class="text-4xl font-bold mb-10">Get In Touch</h2>
+    <p class="text-gray-300 mb-6">Feel free to reach out for collaboration, consulting, or just a friendly hello!</p>
+    <a href="mailto:travis@example.com" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300">Email Me</a>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer bg-gray-800 text-gray-400 text-center py-6">
-    © 2025 Travis Murphy. All rights reserved.
+  <footer class="py-6 bg-gray-900 text-center text-gray-500">
+    &copy; 2025 Travis Murphy. All rights reserved.
   </footer>
+
+  <!-- Optional JS for fade-in and particles -->
+  <script>
+    // Fade-in animations
+    document.querySelectorAll('.animate-fade-in').forEach(el => {
+      el.classList.add('opacity-0');
+      setTimeout(() => el.classList.add('opacity-100', 'transition', 'duration-1000'), 100);
+    });
+
+    // Simple floating particles
+    const particles = document.querySelectorAll('.particle');
+    particles.forEach(p => {
+      const size = Math.random() * 10 + 5;
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      p.style.width = size + 'px';
+      p.style.height = size + 'px';
+      p.style.position = 'absolute';
+      p.style.top = y + 'px';
+      p.style.left = x + 'px';
+      p.style.borderRadius = '50%';
+      p.style.animation = `float ${5 + Math.random()*5}s ease-in-out infinite alternate`;
+    });
+  </script>
+
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-50px); }
+    }
+  </style>
 
 </body>
 </html>
