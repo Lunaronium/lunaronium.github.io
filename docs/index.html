@@ -6,66 +6,69 @@
   <title>Travis Murphy | Cloud Engineer & DevOps</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-50px); }
+    }
+    .animate-fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .animate-fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
-
-  <!-- Navigation Bar -->
-  <nav class="fixed top-0 left-0 w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 shadow-md">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold text-purple-500">Travis Murphy</a>
-      <ul class="flex space-x-6 text-gray-300 font-semibold">
-        <li><a href="#skills" class="hover:text-purple-500 transition duration-300">Skills</a></li>
-        <li><a href="#projects" class="hover:text-purple-500 transition duration-300">Projects</a></li>
-        <li><a href="#contact" class="hover:text-purple-500 transition duration-300">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
   <!-- Hero Section -->
   <section class="relative flex flex-col justify-center items-center h-screen text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
     <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Hi, I’m Travis Murphy</h1>
     <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-200">Cloud Engineer | DevOps Enthusiast | Problem Solver</p>
-    <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full text-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300 animate-bounce">View My Work</a>
-    
+    <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full text-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition transform hover:-translate-y-1 animate-bounce">View My Work</a>
     <!-- Subtle floating particles -->
     <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
-      <div class="particle bg-purple-500 opacity-30"></div>
-      <div class="particle bg-blue-500 opacity-20"></div>
+      <div class="particle bg-purple-500 opacity-20"></div>
+      <div class="particle bg-blue-500 opacity-15"></div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-20 bg-gray-800 text-center">
-    <h2 class="text-4xl font-bold mb-10">My Skills</h2>
+  <section id="skills" class="py-24 bg-gray-800 text-center max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12">My Skills</h2>
     <div class="flex flex-wrap justify-center gap-6">
-      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
         <h3 class="font-semibold text-xl mb-2">AWS Cloud</h3>
-        <p class="text-gray-300">EC2, S3, VPC, Lambda</p>
+        <p class="text-gray-200">EC2, S3, VPC, Lambda</p>
       </div>
-      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
         <h3 class="font-semibold text-xl mb-2">Terraform</h3>
-        <p class="text-gray-300">Infrastructure as Code</p>
+        <p class="text-gray-200">Infrastructure as Code</p>
       </div>
-      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+      <div class="skill-card p-6 bg-gray-700 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
         <h3 class="font-semibold text-xl mb-2">DevOps</h3>
-        <p class="text-gray-300">CI/CD, Docker, GitHub Actions</p>
+        <p class="text-gray-200">CI/CD, Docker, GitHub Actions</p>
       </div>
       <!-- Add more skill cards here -->
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-gray-900 text-center">
-    <h2 class="text-4xl font-bold mb-10">Featured Projects</h2>
+  <section id="projects" class="py-24 bg-gray-900 text-center max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12">Featured Projects</h2>
     <div class="flex flex-wrap justify-center gap-8">
-      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
         <h3 class="font-semibold text-xl mb-2">Project One</h3>
-        <p class="text-gray-300 mb-4">A cloud automation project using AWS and Terraform.</p>
+        <p class="text-gray-200 mb-4">A cloud automation project using AWS and Terraform.</p>
         <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
       </div>
-      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 transition duration-300 cursor-pointer">
+      <div class="project-card w-80 p-6 bg-gray-800 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300 cursor-pointer">
         <h3 class="font-semibold text-xl mb-2">Project Two</h3>
-        <p class="text-gray-300 mb-4">Serverless application demonstrating DevOps best practices.</p>
+        <p class="text-gray-200 mb-4">Serverless application demonstrating DevOps best practices.</p>
         <a href="#" class="text-purple-400 hover:text-purple-600 font-semibold">View Details →</a>
       </div>
       <!-- Add more project cards here -->
@@ -73,10 +76,10 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-800 text-center">
-    <h2 class="text-4xl font-bold mb-10">Get In Touch</h2>
-    <p class="text-gray-300 mb-6">Feel free to reach out for collaboration, consulting, or just a friendly hello!</p>
-    <a href="mailto:travis@example.com" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300">Email Me</a>
+  <section id="contact" class="py-24 bg-gray-800 text-center max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12">Get In Touch</h2>
+    <p class="text-gray-200 mb-6">Feel free to reach out for collaboration, consulting, or just a friendly hello!</p>
+    <a href="mailto:travis@example.com" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition transform hover:-translate-y-1">Email Me</a>
   </section>
 
   <!-- Footer -->
@@ -84,15 +87,20 @@
     &copy; 2025 Travis Murphy. All rights reserved.
   </footer>
 
-  <!-- Optional JS for fade-in, particles, and smooth scroll -->
+  <!-- Optional JS for fade-in, scroll animation, and particles -->
   <script>
-    // Fade-in animations
-    document.querySelectorAll('.animate-fade-in').forEach(el => {
-      el.classList.add('opacity-0');
-      setTimeout(() => el.classList.add('opacity-100', 'transition', 'duration-1000'), 100);
-    });
+    // Fade-in on scroll using IntersectionObserver
+    const fadeElements = document.querySelectorAll('.animate-fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+    fadeElements.forEach(el => observer.observe(el));
 
-    // Simple floating particles
+    // Floating particles
     const particles = document.querySelectorAll('.particle');
     particles.forEach(p => {
       const size = Math.random() * 10 + 5;
@@ -104,25 +112,9 @@
       p.style.top = y + 'px';
       p.style.left = x + 'px';
       p.style.borderRadius = '50%';
-      p.style.animation = `float ${5 + Math.random()*5}s ease-in-out infinite alternate`;
-    });
-
-    // Smooth scroll for nav links
-    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-      });
+      p.style.animation = `float ${5 + Math.random() * 5}s ease-in-out infinite alternate`;
     });
   </script>
-
-  <style>
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-50px); }
-    }
-  </style>
 
 </body>
 </html>
