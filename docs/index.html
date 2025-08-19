@@ -1,60 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Travis Murphy — Cloud Engineer Portfolio</title>
-
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/style.css">
-
-  <!-- Optional: Animate on Scroll Library -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travis Murphy | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Header / Navbar -->
-  <header class="site-header bg-gray-900 text-white shadow-md fixed w-full z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-6">
-      <h1 class="text-2xl font-bold">Travis Murphy</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:text-blue-400 transition">Home</a>
-        <a href="about.html" class="hover:text-blue-400 transition">About</a>
-        <a href="projects.html" class="hover:text-blue-400 transition">Projects</a>
-        <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
-      </nav>
+  <!-- Navbar -->
+  <nav class="bg-gray-100 shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="text-2xl font-bold text-gray-800">Travis Murphy</a>
+        <div class="space-x-6">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="projects.html" class="hover:text-blue-600">Projects</a>
+          <a href="skills.html" class="hover:text-blue-600">Skills</a>
+          <a href="contact.html" class="hover:text-blue-600">Contact</a>
+        </div>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-r from-blue-500 to-purple-600 text-white pt-32 md:pt-40 pb-32">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-      
-      <!-- Text -->
-      <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
-        <h2 class="text-5xl md:text-6xl font-extrabold mb-6">Hi, I’m Travis Murphy.</h2>
-        <p class="text-lg md:text-xl mb-6">
-          Cloud Engineer passionate about AWS, IAM, and Infrastructure as Code.
-        </p>
-        <a href="projects.html" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">
-          View My Work
-        </a>
-      </div>
-
-      <!-- Illustration -->
-      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center" data-aos="fade-left">
-        <img src="assets/hero-illustration.svg" alt="Cloud illustration" class="w-80 md:w-full">
-      </div>
-    </div>
+  <section class="bg-gray-100 py-32 px-4 text-center" data-aos="fade-up">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6">Hi, I'm Travis Murphy</h1>
+    <p class="text-xl md:text-2xl mb-8 text-gray-700">Cloud Engineer | Security Enthusiast | Terraform & AWS Specialist</p>
+    <a href="projects.html" class="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg shadow hover:bg-blue-700 transition">View My Work</a>
   </section>
 
   <!-- Core Skills Section -->
   <section class="max-w-6xl mx-auto py-20 px-4">
-    <h3 class="text-3xl font-bold text-center mb-12">Core Skills & Expertise</h3>
+    <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Core Skills & Expertise</h3>
     <div class="grid md:grid-cols-3 gap-8">
 
       <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-2" data-aos="fade-up">
@@ -75,10 +55,10 @@
     </div>
   </section>
 
-  <!-- Featured Projects -->
+  <!-- Featured Projects Section -->
   <section class="bg-gray-100 py-20 px-4">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold text-center mb-12">Featured Projects</h3>
+      <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Featured Projects</h3>
       <div class="grid md:grid-cols-2 gap-8">
 
         <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in">
@@ -100,29 +80,25 @@
     </div>
   </section>
 
-
-  <!-- Call-to-Action -->
-  <section class="bg-gray-900 text-white py-20 px-4">
-    <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
-      <h3 class="text-3xl font-bold mb-4">Want to Collaborate?</h3>
-      <p class="mb-6 text-gray-200">I’m always open to exciting cloud projects or consulting opportunities.</p>
-      <a href="contact.html" class="bg-blue-600 px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">Get in Touch</a>
-    </div>
+  <!-- Call to Action Section -->
+  <section class="py-20 px-4 text-center">
+    <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">Interested in working together?</h3>
+    <p class="text-gray-700 mb-8" data-aos="fade-up" data-aos-delay="100">I’m open to freelance or full-time opportunities. Let’s build something amazing together.</p>
+    <a href="contact.html" class="bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg shadow hover:bg-blue-700 transition" data-aos="fade-up" data-aos-delay="200">Get in Touch</a>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer bg-gray-800 text-gray-400 text-center py-6">
-    © 2025 Travis Murphy. All rights reserved.
+  <footer class="bg-gray-100 py-6 text-center text-gray-600">
+    &copy; 2025 Travis Murphy. All rights reserved.
   </footer>
 
-  <!-- Animate On Scroll Initialization -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
       once: true,
+      duration: 700,
+      easing: 'ease-out-quart'
     });
   </script>
-
 </body>
 </html>
