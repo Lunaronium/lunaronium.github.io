@@ -23,11 +23,11 @@
 
   <!-- Hero Section -->
   <section class="relative flex flex-col justify-center items-center h-screen text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Hi, I’m Travis Murphy</h1>
-    <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-200">Cloud Engineer | DevOps Enthusiast | Problem Solver</p>
+    <h1 class="text-5xl md:text-6xl font-bold mb-4 opacity-0 animate-fade-in">Hi, I’m Travis Murphy</h1>
+    <p class="text-xl md:text-2xl mb-8 opacity-0 animate-fade-in delay-200">Cloud Engineer | DevOps Enthusiast | Problem Solver</p>
     <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full text-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300 animate-bounce">View My Work</a>
     
-    <!-- Subtle floating particles -->
+    <!-- Floating particles -->
     <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
       <div class="particle bg-purple-500 opacity-30"></div>
       <div class="particle bg-blue-500 opacity-20"></div>
@@ -84,15 +84,17 @@
     &copy; 2025 Travis Murphy. All rights reserved.
   </footer>
 
-  <!-- Optional JS for fade-in, particles, and smooth scroll -->
+  <!-- Scripts for animations and smooth scroll -->
   <script>
-    // Fade-in animations
+    // Fade-in animation
     document.querySelectorAll('.animate-fade-in').forEach(el => {
-      el.classList.add('opacity-0');
-      setTimeout(() => el.classList.add('opacity-100', 'transition', 'duration-1000'), 100);
+      setTimeout(() => {
+        el.classList.remove('opacity-0');
+        el.classList.add('opacity-100', 'transition', 'duration-1000');
+      }, 100);
     });
 
-    // Simple floating particles
+    // Floating particles
     const particles = document.querySelectorAll('.particle');
     particles.forEach(p => {
       const size = Math.random() * 10 + 5;
@@ -122,6 +124,9 @@
       0% { transform: translateY(0px); }
       100% { transform: translateY(-50px); }
     }
+
+    .opacity-0 { opacity: 0; }
+    .opacity-100 { opacity: 1; }
   </style>
 
 </body>
