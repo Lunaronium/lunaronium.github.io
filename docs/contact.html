@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travis Murphy | Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-md z-50 py-4 px-8 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-bold text-purple-400 hover:text-purple-600">Travis Murphy</a>
+    <div class="space-x-6">
+      <a href="index.html" class="hover:text-purple-500 transition">Home</a>
+      <a href="about.html" class="hover:text-purple-500 transition">About</a>
+      <a href="projects.html" class="hover:text-purple-500 transition">Projects</a>
+      <a href="contact.html" class="hover:text-purple-500 transition">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative flex flex-col justify-center items-center h-64 text-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 mt-16">
+    <h1 class="text-5xl md:text-6xl font-bold mb-2 animate-fade-in">Contact Me</h1>
+    <p class="text-xl md:text-2xl text-gray-300 animate-fade-in delay-200">Have a question or want to collaborate? Let’s connect!</p>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="py-12 md:py-16 px-6 md:px-12 max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold mb-8 text-center">Send a Message</h2>
+    <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-lg space-y-6">
+      
+      <div>
+        <label for="name" class="block text-gray-300 mb-2 font-semibold">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500">
+      </div>
+
+      <div>
+        <label for="email" class="block text-gray-300 mb-2 font-semibold">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500">
+      </div>
+
+      <div>
+        <label for="message" class="block text-gray-300 mb-2 font-semibold">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Your message..." class="w-full p-3 rounded-lg bg-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+      </div>
+
+      <button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Additional Contact Info -->
+  <section class="py-12 bg-gray-800 text-center">
+    <h2 class="text-4xl font-bold mb-4">Other Ways to Reach Me</h2>
+    <p class="text-gray-300 mb-6">Email, social media, or carrier pigeon – your choice! 📨</p>
+    <p class="text-gray-300 mb-2">Email: <a href="mailto:travis@example.com" class="text-purple-400 hover:text-purple-600">travis@example.com</a></p>
+    <p class="text-gray-300">LinkedIn: <a href="#" class="text-purple-400 hover:text-purple-600">@YourLinkedIn</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-center text-gray-500">
+    &copy; 2025 Travis Murphy. All rights reserved.
+  </footer>
+
+</body>
+</html>
