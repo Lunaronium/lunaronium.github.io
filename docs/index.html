@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Travis Murphy | Cloud Engineer & DevOps</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
 
@@ -27,7 +27,7 @@
     <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in opacity-0">Hi, I’m Travis Murphy</h1>
     <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-200 opacity-0">Cloud Engineer | DevOps Enthusiast | Problem Solver</p>
     <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full text-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300 animate-bounce shadow-lg">View My Work</a>
-    
+
     <!-- Subtle floating particles -->
     <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
       <div class="particle bg-purple-500 opacity-30"></div>
@@ -35,18 +35,11 @@
     </div>
   </section>
 
-  <!-- About Me Section -->
+  <!-- About Me Section (text only) -->
   <section id="about" class="py-20 bg-gray-800 px-6">
     <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:space-x-12">
-      <!-- Profile Image -->
-      <div class="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center">
-        <img src="assets/profile.png" alt="Profile Picture" class="rounded-full shadow-xl w-64 h-64 object-cover border-4 border-purple-500">
-      </div>
 
-  <!-- About Me Section -->
-  <section id="about" class="py-20 bg-gray-800 px-6">
-    <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+    <!-- Text Block -->
     <div class="max-w-4xl mx-auto text-gray-300 text-lg md:text-xl">
       <h3 class="text-3xl font-bold mb-6 text-purple-400">Hello, I’m Travis</h3>
       <p class="mb-4">I’m a Cloud Engineer and DevOps enthusiast with a passion for building scalable, efficient, and secure cloud solutions. Over the years, I’ve honed my skills in AWS, Terraform, CI/CD pipelines, and more.</p>
@@ -73,7 +66,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- Skills Section -->
   <section id="skills" class="py-20 bg-gray-900 text-center">
@@ -120,7 +112,7 @@
     <form action="https://formspree.io/f/mnnzknya" method="POST" class="max-w-lg mx-auto text-left bg-gray-800 p-8 rounded-xl shadow-lg">
       <label class="block mb-4">
         <span class="text-gray-300">Your Email</span>
-        <input type="email" name="email" required class="mt-2 w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 focus:ring-2 focus:ring-purple-500">
+        <input type="email" name="email" required class="mt-2 w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-100 focus:ring-2 focus:ring-purple-500"/>
       </label>
       <label class="block mb-4">
         <span class="text-gray-300">Your Message</span>
@@ -128,6 +120,7 @@
       </label>
       <button type="submit" class="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300">Send Message</button>
       <p id="successMessage" class="hidden mt-4 text-green-400 font-semibold">✅ Thank you! Your message has been sent.</p>
+      <p id="errorMessage" class="hidden mt-4 text-red-400 font-semibold">⚠️ Something went wrong. Please try again.</p>
     </form>
   </section>
 
@@ -145,8 +138,8 @@
       }, 200 * i);
     });
 
-    // Floating particles
-    const particles = document.querySelectorAll('.particle');
+    // Floating particles (hero only)
+    const particles = document.querySelectorAll('#hero .particle');
     particles.forEach(p => {
       const size = Math.random() * 10 + 5;
       const x = Math.random() * window.innerWidth;
@@ -157,7 +150,7 @@
       p.style.top = y + 'px';
       p.style.left = x + 'px';
       p.style.borderRadius = '50%';
-      p.style.animation = `float ${5 + Math.random()*5}s ease-in-out infinite alternate`;
+      p.style.animation = `float ${5 + Math.random() * 5}s ease-in-out infinite alternate`;
     });
 
     // Smooth scroll for nav links
@@ -170,20 +163,31 @@
     });
 
     // Inline success message for Formspree
-    const form = document.querySelector("form");
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
+    const form = document.querySelector('form[action^="https://formspree.io"]');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            form.reset();
+            document.getElementById('errorMessage').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+          } else {
+            document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('errorMessage').classList.remove('hidden');
+          }
+        } catch (err) {
+          document.getElementById('successMessage').classList.add('hidden');
+          document.getElementById('errorMessage').classList.remove('hidden');
+        }
       });
-      if (response.ok) {
-        form.reset();
-        document.getElementById("successMessage").classList.remove("hidden");
-      }
-    });
+    }
   </script>
 
   <style>
