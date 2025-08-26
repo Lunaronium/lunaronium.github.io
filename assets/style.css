@@ -1,202 +1,107 @@
-/* =========================
-   Global Styles
-========================= */
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #1f2937; /* Tailwind gray-900 fallback */
-    color: #e5e7eb; /* Tailwind gray-200 fallback */
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-/* Smooth fade-in animation */
-.animate-fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.animate-fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* =========================
-   Hero Section
-========================= */
-section.hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    background: linear-gradient(to bottom, #1f2937, #111827, #1f2937);
-    overflow: hidden;
-}
-
-section.hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-section.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-}
-
-.hero a {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 9999px;
-    font-weight: 600;
-    background: linear-gradient(to right, #8b5cf6, #3b82f6);
-    color: #fff;
-}
-
-.hero a:hover {
-    background: linear-gradient(to right, #3b82f6, #8b5cf6);
-    transform: translateY(-3px);
-}
-
-/* Floating particle styles */
-.particle {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 0.15;
-    animation: float 6s ease-in-out infinite alternate;
-}
-
-/* Float keyframes */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-50px); }
-}
-
-/* =========================
-   Skills Section
-========================= */
-section#skills {
-    padding: 6rem 2rem;
-    text-align: center;
-}
-
-section#skills h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-}
-
-.skill-card {
-    background-color: #374151; /* Tailwind gray-700 */
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-    transition: all 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
-}
-
-/* =========================
-   Projects Section
-========================= */
-section#projects {
-    padding: 6rem 2rem;
-    text-align: center;
-}
-
-section#projects h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-}
-
-.project-card {
-    background-color: #1f2937; /* Tailwind gray-800 */
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
-}
-
-.project-card a {
-    color: #8b5cf6;
-    font-weight: 600;
-}
-
-.project-card a:hover {
-    color: #3b82f6;
-}
-
-/* =========================
-   Contact Section
-========================= */
-section#contact {
-    padding: 6rem 2rem;
-    text-align: center;
-    background-color: #374151; /* Tailwind gray-800 */
-}
-
-section#contact h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-}
-
-section#contact a {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    border-radius: 9999px;
-    font-weight: 600;
-    background: linear-gradient(to right, #8b5cf6, #3b82f6);
-    color: #fff;
-}
-
-section#contact a:hover {
-    background: linear-gradient(to right, #3b82f6, #8b5cf6);
-    transform: translateY(-3px);
-}
-
-/* =========================
-   Footer
-========================= */
-footer {
-    padding: 1.5rem 2rem;
-    text-align: center;
-    color: #9ca3af; /* Tailwind gray-400 */
-}
-
-/* =========================
-   Responsive Media Queries
-========================= */
-@media (min-width: 768px) {
-    section.hero h1 {
-        font-size: 4.5rem;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luna | Cloud Engineer Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
     }
-    section.hero p {
-        font-size: 2rem;
-    }
-}
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 bg-gray-800 bg-opacity-90 shadow z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold text-purple-400">Luna</a>
+      <div class="space-x-6">
+        <a href="#about" class="hover:text-purple-400">About</a>
+        <a href="#projects" class="hover:text-purple-400">Projects</a>
+        <a href="#contact" class="hover:text-purple-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Home -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-4">
+    <h1 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-purple-400">Luna</span></h1>
+    <p class="text-xl text-gray-300 mb-8">Cloud Engineer | DevOps Enthusiast | Automation Builder</p>
+    <a href="#projects" class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg">View My Work</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-gray-800">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <img src="assets/profile.png" alt="Profile picture" class="rounded-2xl shadow-lg w-80 mx-auto md:mx-0">
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold mb-6 text-purple-400">About Me</h2>
+        <p class="text-gray-300 leading-relaxed mb-4">
+          I’m Luna, a Cloud Engineer with a passion for building scalable and secure solutions. 
+          With hands-on experience in AWS, IAM, Terraform, and DevOps workflows, I create 
+          automation-driven infrastructure that helps businesses scale smoothly.
+        </p>
+        <p class="text-gray-300 leading-relaxed">
+          When I’m not in the cloud, you’ll find me experimenting with game development, VR projects, 
+          or building personal apps that bring ideas to life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-purple-400 mb-12 text-center">Featured Projects</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Project Card -->
+        <div class="bg-gray-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold mb-2 text-white">AWS Cloud Setup</h3>
+          <p class="text-gray-300 mb-4">Designed and deployed multi-tier architecture on AWS with Terraform automation.</p>
+          <a href="#" class="text-purple-400 hover:underline">View Project →</a>
+        </div>
+
+        <div class="bg-gray-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold mb-2 text-white">Identity & Access Management</h3>
+          <p class="text-gray-300 mb-4">Implemented IAM solutions with Entra ID, enhancing security and user workflows.</p>
+          <a href="#" class="text-purple-400 hover:underline">View Project →</a>
+        </div>
+
+        <div class="bg-gray-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold mb-2 text-white">DevOps Pipeline</h3>
+          <p class="text-gray-300 mb-4">Built CI/CD pipelines integrating GitHub Actions, Docker, and AWS services.</p>
+          <a href="#" class="text-purple-400 hover:underline">View Project →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 bg-gray-800">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-purple-400 mb-6">Contact Me</h2>
+      <p class="text-gray-300 mb-8">Have a project in mind or just want to say hello? Let’s connect.</p>
+      
+      <!-- Contact Form -->
+      <form action="https://formspree.io/f/mnnzknya" method="POST" class="space-y-4 max-w-lg mx-auto">
+        <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <textarea name="message" rows="5" placeholder="Your Message" class="w-full px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+        <button type="submit" class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-6 text-center text-gray-500 text-sm">
+    © 2025 Luna. All rights reserved.
+  </footer>
+
+</body>
+</html>
