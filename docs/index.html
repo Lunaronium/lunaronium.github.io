@@ -36,14 +36,41 @@
   </section>
 
   <!-- About Me Section -->
-  <section id="about" class="py-20 bg-gray-800 text-center px-6">
-    <h2 class="text-4xl font-bold mb-8">About Me</h2>
-    <p class="max-w-3xl mx-auto text-gray-300 text-lg md:text-xl mb-6">
-      I’m a passionate Cloud Engineer and DevOps enthusiast with experience in AWS, Terraform, and modern infrastructure automation. 
-      I love solving complex problems, optimizing workflows, and building scalable solutions. 
-      When I’m not coding or configuring servers, I enjoy learning new technologies and contributing to open-source projects.
-    </p>
-    <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full font-semibold hover:from-blue-500 hover:to-purple-600 transition duration-300 shadow-lg">Let’s Connect</a>
+  <section id="about" class="py-20 bg-gray-800 px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:space-x-12">
+      <!-- Profile Image -->
+      <div class="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center">
+        <img src="assets/profile.png" alt="Profile Picture" class="rounded-full shadow-xl w-64 h-64 object-cover border-4 border-purple-500">
+      </div>
+
+      <!-- About Text -->
+      <div class="w-full md:w-2/3 text-gray-300 text-lg md:text-xl">
+        <h3 class="text-3xl font-bold mb-6 text-purple-400">Hello, I’m Travis</h3>
+        <p class="mb-4">I’m a Cloud Engineer and DevOps enthusiast with a passion for building scalable, efficient, and secure cloud solutions. Over the years, I’ve honed my skills in AWS, Terraform, CI/CD pipelines, and more.</p>
+        <p class="mb-4">I thrive on solving complex problems and enjoy exploring new technologies that push the boundaries of what’s possible. Outside of work, I’m passionate about personal projects, learning new tools, and continually growing as a professional and individual.</p>
+        <p>My mission is to create meaningful solutions that combine technology, creativity, and efficiency.</p>
+      </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <div class="mt-16 text-center">
+      <h3 class="text-3xl font-bold mb-12">My Journey</h3>
+      <div class="flex flex-col md:flex-row justify-center items-start md:space-x-8 gap-8">
+        <div class="timeline-card p-6 bg-gray-900 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700 transition duration-300">
+          <h4 class="font-semibold text-xl mb-2 text-purple-400">High School</h4>
+          <p class="text-gray-300">Discovered a passion for technology, gaming, and how networks and servers work.</p>
+        </div>
+        <div class="timeline-card p-6 bg-gray-900 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700 transition duration-300">
+          <h4 class="font-semibold text-xl mb-2 text-purple-400">Higher Education</h4>
+          <p class="text-gray-300">Studied Software Systems Development & Digital Technology, learning foundational skills in software, networking, and cloud systems.</p>
+        </div>
+        <div class="timeline-card p-6 bg-gray-900 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-700 transition duration-300">
+          <h4 class="font-semibold text-xl mb-2 text-purple-400">Professional Career</h4>
+          <p class="text-gray-300">Gained real-world experience in cloud engineering, DevOps practices, and infrastructure automation.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Skills Section -->
@@ -136,7 +163,7 @@
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     });
 
